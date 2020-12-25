@@ -70,6 +70,9 @@ df['max_salary'] = df.apply(lambda x: x.max_salary*2 if x.hourly==1 else x.max_s
 # fix company text
 df['company_text'] = df['company_text'].apply(lambda x: x.replace('\n',''))
 
+# save to file
+df.to_csv("eda_data.csv", index=False)
+
 # stats and plots
 df.columns
 
