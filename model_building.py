@@ -39,7 +39,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 # Modeling
 X_sm = sm.add_constant(X)
 model = sm.OLS(y,X_sm)
-model.fit().summary()
+print(model.fit().summary())
 
 lm = LinearRegression()
 lm.fit(X_train, y_train)
